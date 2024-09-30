@@ -1,23 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import characters from './data/characters.json'
+import './App.css';
+import characters from './data/characters.json';
+import CharactersList from './components/CharactersList';
+import NumberOfCharacters from './components/NumberOfCharacters';
 
 function App() {
   return (
     <>
       <h1>Marvel Characters</h1>
-      <ul id="characters">
-        {characters.map((character)=>(
-          <li key={character.id}>
-            {character.name}
-          </li>
-        ))}
-      </ul>
+      <CharactersList characters={characters} />
+      <NumberOfCharacters characters={characters} />
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
