@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-function ContactPage ({}) {
-    document.title="Contact us | Marvel App";
-    return(
-        <>
-        <h2>Contact us </h2>
-        <p>Feel free to contact us at <a href = "mailto:mail@example.org">mail@example.org</a> </p>
-        </>
-    )
-}
+const ContactPage = () => {
+  // Modifier le titre de la page
+  useEffect(() => {
+    document.title = "Contact | Marvel App"; // Changer le titre de la page
+  }, []);
+
+  return (
+    <div>
+      <h2>Contact Us</h2>
+      <p>
+        Feel free to contact us at 
+        <a href="mailto:marvelApp@gmail.com"> marvelApp@gmail.com</a>.
+      </p>
+    </div>
+  );
+};
 
 export default ContactPage;
