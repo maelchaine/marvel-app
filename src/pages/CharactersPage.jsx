@@ -16,7 +16,7 @@ export default function CharactersPage() {
 
     return (
         <div>
-            <h1>Liste des personnages</h1>
+            <h2>Marvel Characters</h2>
             <CharactersList characters={characters} />
 
             <NumberOfCharacters characters={characters} />
